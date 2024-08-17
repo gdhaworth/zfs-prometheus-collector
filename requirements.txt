@@ -1,0 +1,3 @@
+PyYAML~=6.0.2
+prometheus_client~=0.20.0
+zfslib~=0.13.2

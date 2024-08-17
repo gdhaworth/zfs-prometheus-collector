@@ -1,0 +1,162 @@
+properties:
+  zpool:
+    gauges:
+      default:
+      - allocated
+      - capacity
+      - fragmentation
+      - free
+      - size
+      extended:
+      - dedupratio
+      - freeing
+      - leaked
+
+    info:
+      default:
+      - altroot
+      - ashift
+      - autotrim
+      - bootfs
+      - cachefile
+      - comment
+      - compatibility
+      - failmode
+      - guid
+      - health
+      - multihost
+      - readonly
+      - version
+      extended:
+      - autoexpand
+      - autoreplace
+      - checkpoint
+      - delegation
+      - expandsize
+      - listsnapshots
+      - load_guid
+
+    not_yet_used:
+    - bcloneratio
+    - bclonesaved
+    - bcloneused
+  #  - feature@...
+
+  zfs:
+    labels:
+    - mounted
+    - mountpoint
+    - type
+
+    gauges:
+      default:
+      - available
+      - compressratio
+      - logicalreferenced
+      - logicalused
+      - refcompressratio
+      - referenced
+      - used
+      - usedbychildren
+      - usedbydataset
+      - usedbyrefreservation
+      - usedbysnapshots
+      - written
+      extended:
+      - special_small_blocks
+
+    gauges_if_not_none:
+      default:
+      - quota
+      - refquota
+      - refreservation
+      - reservation
+      - snapshot_count
+      extended:
+      - filesystem_count
+      - filesystem_limit
+      - snapshot_limit
+
+    info:
+      default:
+      - aclinherit
+      - aclmode
+      - acltype
+      - atime
+      - canmount
+      - casesensitivity
+      - checksum
+      - compression
+      - context
+      - dedup
+      - dnodesize
+      - encryption
+      - fscontext
+      - guid
+      - keyformat
+      - keylocation
+      - keystatus
+      - normalization
+      - objsetid
+      - overlay
+      - prefetch
+      - primarycache
+      - readonly
+      - recordsize
+      - relatime
+      - secondarycache
+      - setuid
+      - sharenfs
+      - sharesmb
+      - snapdev
+      - snapdir
+      - sync
+      - utf8only
+      - version
+      - xattr
+      extended:
+      - defcontext
+      - devices
+      - exec
+      - logbias
+      - mlslabel
+      - nbmand
+      - redundant_metadata
+      - rootcontext
+      - volmode
+      - vscan
+      - zoned
+
+    info_date:
+      default:
+      - creation
+      - snapshots_changed
+      extended: []
+
+    not_yet_used:
+    - clones
+    - copies
+    - createtxg
+    - defer_destroy
+    - encryptionroot
+  #  - groupobjquota@...
+  #  - groupobjused@...
+  #  - groupquota@...
+  #  - groupused@...
+    - origin
+    - pbkdf2iters
+  #  - projectobjquota@...
+  #  - projectobjused@...
+  #  - projectquota@...
+  #  - projectused@...
+    - receive_resume_token
+    - redact_snaps
+  #  - userobjquota@...
+  #  - userobjused@...
+  #  - userquota@...
+    - userrefs
+  #  - userused@...
+    - volblocksize
+    - volsize
+  #  - written#<bookmark>
+  #  - written@<snap>
